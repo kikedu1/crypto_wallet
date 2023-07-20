@@ -1,0 +1,25 @@
+W, [2023-07-20T17:14:58.777813 #8092]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2023-07-20T17:15:50.445697 #8092]  INFO -- : [8b9b759c-db89-4c6e-95e6-ed646897c758] Started GET "/coins" for 127.0.0.1 at 2023-07-20 17:15:50 -0300
+I, [2023-07-20T17:15:50.453982 #8092]  INFO -- : [8b9b759c-db89-4c6e-95e6-ed646897c758] Processing by CoinsController#index as HTML
+I, [2023-07-20T17:15:50.483627 #8092]  INFO -- : [8b9b759c-db89-4c6e-95e6-ed646897c758]   Rendered coins/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2683)
+I, [2023-07-20T17:15:50.484219 #8092]  INFO -- : [8b9b759c-db89-4c6e-95e6-ed646897c758]   Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 2736)
+I, [2023-07-20T17:15:50.484581 #8092]  INFO -- : [8b9b759c-db89-4c6e-95e6-ed646897c758] Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.5ms | Allocations: 4324)
+F, [2023-07-20T17:15:50.485422 #8092] FATAL -- : [8b9b759c-db89-4c6e-95e6-ed646897c758]   
+[8b9b759c-db89-4c6e-95e6-ed646897c758] ActionView::Template::Error (SQLite3::SQLException: no such table: coins):
+[8b9b759c-db89-4c6e-95e6-ed646897c758]     3: <h1>Coins</h1>
+[8b9b759c-db89-4c6e-95e6-ed646897c758]     4: 
+[8b9b759c-db89-4c6e-95e6-ed646897c758]     5: <div id="coins">
+[8b9b759c-db89-4c6e-95e6-ed646897c758]     6:   <% @coins.each do |coin| %>
+[8b9b759c-db89-4c6e-95e6-ed646897c758]     7:     <%= render coin %>
+[8b9b759c-db89-4c6e-95e6-ed646897c758]     8:     <p>
+[8b9b759c-db89-4c6e-95e6-ed646897c758]     9:       <%= link_to "Show this coin", coin %>
+[8b9b759c-db89-4c6e-95e6-ed646897c758]   
+[8b9b759c-db89-4c6e-95e6-ed646897c758] app/views/coins/index.html.erb:6
+I, [2023-07-20T17:16:02.787263 #8092]  INFO -- : [e98fbf1e-c04e-4518-8e7c-af3244d2f9ef] Started GET "/" for 127.0.0.1 at 2023-07-20 17:16:02 -0300
+F, [2023-07-20T17:16:02.788303 #8092] FATAL -- : [e98fbf1e-c04e-4518-8e7c-af3244d2f9ef]   
+[e98fbf1e-c04e-4518-8e7c-af3244d2f9ef] ActionController::RoutingError (No route matches [GET] "/"):
+[e98fbf1e-c04e-4518-8e7c-af3244d2f9ef]   
+I, [2023-07-20T17:16:13.631002 #8092]  INFO -- : [17cb5447-3802-48e0-b797-6f674838506c] Started GET "/" for 127.0.0.1 at 2023-07-20 17:16:13 -0300
+F, [2023-07-20T17:16:13.631726 #8092] FATAL -- : [17cb5447-3802-48e0-b797-6f674838506c]   
+[17cb5447-3802-48e0-b797-6f674838506c] ActionController::RoutingError (No route matches [GET] "/"):
+[17cb5447-3802-48e0-b797-6f674838506c]   
